@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.makeev/alphai-mcp",
+  "title": "AlphaAI",
+  "description": "Real-time, AI-enriched financial news for AI agents and trading bots: search, trending, actionable-now, SEC Form 4 insider transactions, and two-ticker read-across — each story scored 1-10 for relevance.",
+  "version": "0.1.0",
+  "websiteUrl": "https://alphai.io/mcp",
+  "repository": {
+    "url": "https://github.com/makeev/alphai-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.alphai.io/mcp"
+    }
+  ]
+}
