@@ -76,8 +76,13 @@ peer read-across, manage alerts): **[makeev/alphai-claude-skills](https://github
 
 ## Notes
 
-- This is a **hosted** server — there is nothing to run locally. The source lives in the
-  AlphaAI product backend; this repo is the catalog home + `server.json` manifest.
+- This is a **hosted** server — to *use* it, connect to `https://mcp.alphai.io/mcp`; there
+  is nothing to self-host. The product source lives in the AlphaAI backend; this repo is the
+  catalog home + `server.json` manifest.
+- `glama_server.py` + `Dockerfile` are an **introspection build**: a tiny stdio server that
+  declares the same 11 tools (identical names, schemas, descriptions, annotations) so MCP
+  directories can read the tool catalog without OAuth. Its handlers don't run the queries —
+  they point back at the hosted endpoint, where the real data and auth live.
 - News, not advice. The tools summarize reporting; they don't give buy/sell calls.
 - `raw_text` (full article bodies) is never served — copyright. Responses carry titles,
   AI summaries, per-ticker analysis, categories and relevance scores.
