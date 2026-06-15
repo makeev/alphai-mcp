@@ -1,5 +1,7 @@
 # AlphaAI MCP server
 
+[![alphai-mcp MCP server](https://glama.ai/mcp/servers/makeev/alphai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/makeev/alphai-mcp)
+
 **Real-time, AI-enriched financial news for AI agents and trading bots** — over the
 [Model Context Protocol](https://modelcontextprotocol.io). Hosted at
 **`mcp.alphai.io`**, no install, OAuth (no API key to paste), free tier 100 calls/hour.
@@ -9,8 +11,8 @@ Every story is enriched with **per-ticker analysis**, a **category** (14 buckets
 a reasoning token.
 
 > This repo is the public home of the **hosted** AlphaAI MCP server (the listing you'll
-> find on [Smithery](https://smithery.ai/servers/mihail-makeev/alphai-news), Glama, and
-> the MCP Registry). The product is [AlphaAI](https://alphai.io) — a financial-news
+> find on [Smithery](https://smithery.ai/servers/mihail-makeev/alphai-news),
+> [Glama](https://glama.ai/mcp/servers/makeev/alphai-mcp), and the MCP Registry). The product is [AlphaAI](https://alphai.io) — a financial-news
 > platform built for AI agents.
 
 ## Connect
@@ -72,6 +74,7 @@ peer read-across, manage alerts): **[makeev/alphai-claude-skills](https://github
 - **Playground & docs** — https://alphai.io/mcp
 - **REST API & SDKs** (Python + TypeScript) — https://alphai.io/developers
 - **Smithery listing** — https://smithery.ai/servers/mihail-makeev/alphai-news
+- **Glama listing** — https://glama.ai/mcp/servers/makeev/alphai-mcp
 - **Changelog** — https://alphai.io/changelog
 
 ## Notes
