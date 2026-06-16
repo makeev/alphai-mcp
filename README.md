@@ -1,19 +1,24 @@
 # AlphaAI MCP server
 
-[![alphai-mcp MCP server](https://glama.ai/mcp/servers/makeev/alphai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/makeev/alphai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Official MCP Registry](https://img.shields.io/badge/MCP%20Registry-io.github.makeev%2Falphai--mcp-blue)](https://registry.modelcontextprotocol.io/v0/servers/io.github.makeev%2Falphai-mcp/versions/latest)
+[![Smithery](https://img.shields.io/badge/Smithery-Listed-000000)](https://smithery.ai/servers/mihail-makeev/alphai-news)
+[![Glama](https://img.shields.io/badge/Glama-Listed-blueviolet)](https://glama.ai/mcp/connectors/io.github.makeev/alphai-mcp)
 
 **Real-time, AI-enriched financial news for AI agents and trading bots** — over the
-[Model Context Protocol](https://modelcontextprotocol.io). Hosted at
-**`mcp.alphai.io`**, no install, OAuth (no API key to paste), free tier 100 calls/hour.
+[Model Context Protocol](https://modelcontextprotocol.io). Hosted at **`mcp.alphai.io`**,
+no install, OAuth (no API key to paste), free tier 100 calls/hour.
 
 Every story is enriched with **per-ticker analysis**, a **category** (14 buckets), and a
 **1–10 relevance score**, so an agent can filter to what actually matters before spending
 a reasoning token.
 
-> This repo is the public home of the **hosted** AlphaAI MCP server (the listing you'll
-> find on [Smithery](https://smithery.ai/servers/mihail-makeev/alphai-news),
-> [Glama](https://glama.ai/mcp/servers/makeev/alphai-mcp), and the MCP Registry). The product is [AlphaAI](https://alphai.io) — a financial-news
-> platform built for AI agents.
+> This repo is the public home + `server.json` manifest of the **hosted** AlphaAI MCP
+> server (the listing on [Smithery](https://smithery.ai/servers/mihail-makeev/alphai-news),
+> [Glama](https://glama.ai/mcp/connectors/io.github.makeev/alphai-mcp) and the
+> [MCP Registry](https://registry.modelcontextprotocol.io)). The product is
+> [AlphaAI](https://alphai.io) — a financial-news platform built for AI agents. There is
+> **nothing to self-host**: to use it, just connect to `https://mcp.alphai.io/mcp`.
 
 ## Connect
 
@@ -24,9 +29,9 @@ OAuth-capable MCP client. Claude Code:
 claude mcp add --transport http alphai https://mcp.alphai.io/mcp
 ```
 
-The first tool call opens a browser for **OAuth 2.1** — a login, no key to copy-paste.
-ChatGPT, Claude Desktop / claude.ai, Cursor, VS Code, Windsurf and Gemini connect the
-same way. Or use the one-click listing on
+The first tool call opens a browser for **OAuth 2.1** (DCR + PKCE) — a login, no key to
+copy-paste. ChatGPT, Claude Desktop / claude.ai, Cursor, VS Code, Windsurf and Gemini
+connect the same way. Or use the one-click listing on
 [Smithery](https://smithery.ai/servers/mihail-makeev/alphai-news).
 
 ### Other clients
@@ -34,7 +39,8 @@ same way. Or use the one-click listing on
 | Client | Config |
 |---|---|
 | **Claude Desktop / claude.ai** | Settings → Connectors → Add custom connector → `https://mcp.alphai.io/mcp` |
-| **Cursor** | `~/.cursor/mcp.json` → `{ "mcpServers": { "alphai": { "url": "https://mcp.alphai.io/mcp" } } }` |
+| **Cursor** | `~/.cursor/mcp.json` → `{ "mcpServers": { "alphai": { "type": "http", "url": "https://mcp.alphai.io/mcp" } } }` |
+| **VS Code Copilot** | `.vscode/mcp.json` → `{ "servers": { "alphai": { "type": "http", "url": "https://mcp.alphai.io/mcp" } } }` |
 | **Generic** | Streamable HTTP, URL `https://mcp.alphai.io/mcp`, OAuth 2.1 |
 
 ## Tools (11)
@@ -64,6 +70,14 @@ caller's own subscriptions. Full schemas, params and defaults are advertised by 
 | Alert tools | — | ✓ | ✓ |
 | Page size | 10 | 10 | up to 50 (bulk) |
 
+## Authentication
+
+**OAuth 2.1** with [Dynamic Client Registration (RFC 7591)](https://datatracker.ietf.org/doc/html/rfc7591)
+and [PKCE](https://datatracker.ietf.org/doc/html/rfc7636) per the
+[MCP authorization spec](https://modelcontextprotocol.io/specification/authorization).
+Compatible clients discover the OAuth metadata automatically — no manual API key setup.
+Tool *discovery* (`tools/list`) is open; calling a tool requires the OAuth login.
+
 ## Ready-made Claude Code skills
 
 Drop-in skills that drive these tools (stock brief, market pulse, insider radar,
@@ -74,18 +88,14 @@ peer read-across, manage alerts): **[makeev/alphai-claude-skills](https://github
 - **Playground & docs** — https://alphai.io/mcp
 - **REST API & SDKs** (Python + TypeScript) — https://alphai.io/developers
 - **Smithery listing** — https://smithery.ai/servers/mihail-makeev/alphai-news
-- **Glama listing** — https://glama.ai/mcp/servers/makeev/alphai-mcp
+- **Glama connector** — https://glama.ai/mcp/connectors/io.github.makeev/alphai-mcp
+- **MCP Registry** — `io.github.makeev/alphai-mcp`
 - **Changelog** — https://alphai.io/changelog
 
 ## Notes
 
 - This is a **hosted** server — to *use* it, connect to `https://mcp.alphai.io/mcp`; there
-  is nothing to self-host. The product source lives in the AlphaAI backend; this repo is the
-  catalog home + `server.json` manifest.
-- `glama_server.py` + `Dockerfile` are an **introspection build**: a tiny stdio server that
-  declares the same 11 tools (identical names, schemas, descriptions, annotations) so MCP
-  directories can read the tool catalog without OAuth. Its handlers don't run the queries —
-  they point back at the hosted endpoint, where the real data and auth live.
+  is nothing to self-host. This repo is the catalog home + `server.json` manifest.
 - News, not advice. The tools summarize reporting; they don't give buy/sell calls.
 - `raw_text` (full article bodies) is never served — copyright. Responses carry titles,
   AI summaries, per-ticker analysis, categories and relevance scores.
