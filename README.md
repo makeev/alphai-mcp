@@ -54,7 +54,7 @@ connect the same way. Or use the one-click listing on
 | `alphai_insider_news` | SEC Form 4 insider trades + 13F ownership moves as news |
 | `alphai_pair_analysis` | Two-ticker read-across (news naming both companies) |
 | `alphai_article` | Fetch a single article by `uid` |
-| `alphai_tickers` | Discover supported stock / ETF tickers |
+| `alphai_tickers` | Discover supported tickers — US stocks, ETFs, crypto & foreign listings |
 | `alphai_alerts_list` / `_subscribe` / `_unsubscribe` | Manage your own ticker alert subscriptions *(Basic/Pro)* |
 
 All tools are **read-only** except the `alphai_alerts_*` writes, which only ever touch the
