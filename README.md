@@ -7,7 +7,7 @@
 
 **Real-time, AI-enriched financial news for AI agents and trading bots** — over the
 [Model Context Protocol](https://modelcontextprotocol.io). Hosted at **`mcp.alphai.io`**,
-no install, OAuth (no API key to paste), free tier 100 calls/hour.
+no install, OAuth (no API key to paste), free tier 100 calls/day.
 
 Every story is enriched with **per-ticker analysis**, a **category** (14 buckets), and a
 **1–10 relevance score**, so an agent can filter to what actually matters before spending
@@ -66,7 +66,8 @@ caller's own subscriptions. Full schemas, params and defaults are advertised by 
 | | Free | Basic | Pro |
 |---|---|---|---|
 | Price | $0 (no card) | $2.99/mo | $9.99/mo |
-| Rate limit | 100 / hour | 1,000 / hour | 10,000 / hour |
+| Rate limit — burst | 20 / min | 60 / min | 300 / min |
+| Rate limit — daily | 100 / day | 10,000 / day | 100,000 / day |
 | Alert tools | — | ✓ | ✓ |
 | Page size | 10 | 10 | up to 50 (bulk) |
 
