@@ -3,7 +3,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Official MCP Registry](https://img.shields.io/badge/MCP%20Registry-io.github.makeev%2Falphai--mcp-blue)](https://registry.modelcontextprotocol.io/v0/servers/io.github.makeev%2Falphai-mcp/versions/latest)
 [![Smithery](https://img.shields.io/badge/Smithery-Listed-000000)](https://smithery.ai/servers/mihail-makeev/alphai-news)
-[![Glama](https://img.shields.io/badge/Glama-Listed-blueviolet)](https://glama.ai/mcp/connectors/io.github.makeev/alphai-mcp)
+[![mcp.so](https://img.shields.io/badge/mcp.so-Listed-1c1c1c)](https://mcp.so/server/alphai-news/makeev)
+[![Glama](https://glama.ai/mcp/servers/makeev/alphai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/makeev/alphai-mcp)
+[![Mentioned in Awesome MCP Servers](https://awesome.re/mentioned-badge.svg)](https://github.com/punkpeye/awesome-mcp-servers)
 
 **Real-time, AI-enriched financial news for AI agents and trading bots** — over the
 [Model Context Protocol](https://modelcontextprotocol.io). Hosted at **`mcp.alphai.io`**,
@@ -15,8 +17,10 @@ a reasoning token.
 
 > This repo is the public home + `server.json` manifest of the **hosted** AlphaAI MCP
 > server (the listing on [Smithery](https://smithery.ai/servers/mihail-makeev/alphai-news),
-> [Glama](https://glama.ai/mcp/connectors/io.github.makeev/alphai-mcp) and the
-> [MCP Registry](https://registry.modelcontextprotocol.io)). The product is
+> [Glama](https://glama.ai/mcp/servers/makeev/alphai-mcp),
+> [mcp.so](https://mcp.so/server/alphai-news/makeev), the
+> [MCP Registry](https://registry.modelcontextprotocol.io) and
+> [Awesome MCP Servers](https://github.com/punkpeye/awesome-mcp-servers)). The product is
 > [AlphaAI](https://alphai.io) — a financial-news platform built for AI agents. There is
 > **nothing to self-host**: to use it, just connect to `https://mcp.alphai.io/mcp`.
 
