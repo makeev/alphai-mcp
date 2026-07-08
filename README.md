@@ -33,7 +33,7 @@ OAuth-capable MCP client. Claude Code:
 claude mcp add --transport http alphai https://mcp.alphai.io/mcp
 ```
 
-The first tool call opens a browser for **OAuth 2.1** (DCR + PKCE) — a login, no key to
+Connecting opens a browser for **OAuth 2.1** (DCR + PKCE) — a login, no key to
 copy-paste. ChatGPT, Claude Desktop / claude.ai, Cursor, VS Code, Windsurf and Gemini
 connect the same way. Or use the one-click listing on
 [Smithery](https://smithery.ai/servers/mihail-makeev/alphai-news).
