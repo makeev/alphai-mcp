@@ -47,7 +47,7 @@ connect the same way. Or use the one-click listing on
 | **VS Code Copilot** | `.vscode/mcp.json` → `{ "servers": { "alphai": { "type": "http", "url": "https://mcp.alphai.io/mcp" } } }` |
 | **Generic** | Streamable HTTP, URL `https://mcp.alphai.io/mcp`, OAuth 2.1 |
 
-## Tools (11)
+## Tools (13)
 
 | Tool | What it does |
 |---|---|
@@ -58,6 +58,8 @@ connect the same way. Or use the one-click listing on
 | `alphai_insider_news` | SEC Form 4 insider trades + 13F ownership moves as news |
 | `alphai_pair_analysis` | Two-ticker read-across (news naming both companies) |
 | `alphai_article` | Fetch a single article by `uid` |
+| `alphai_calendar` | Scheduled macro releases (CPI, FOMC, jobless claims) with times and the coverage that followed |
+| `alphai_macro` | Macro-economy feed — prints, central banks, rates, FX, commodities |
 | `alphai_tickers` | Discover supported tickers — US stocks, ETFs, crypto & foreign listings |
 | `alphai_alerts_list` / `_subscribe` / `_unsubscribe` | Manage your own ticker alert subscriptions *(Basic/Pro)* |
 
@@ -70,7 +72,7 @@ caller's own subscriptions. Full schemas, params and defaults are advertised by 
 | | Free | Basic | Pro |
 |---|---|---|---|
 | Price | $0 (no card) | $2.99/mo | $9.99/mo |
-| Rate limit — burst | 20 / min | 60 / min | 300 / min |
+| Rate limit — burst | 20 / min | 60 / min | 150 / min |
 | Rate limit — daily | 100 / day | 10,000 / day | 100,000 / day |
 | Alert tools | — | ✓ | ✓ |
 | Page size | 10 | 10 | up to 50 (bulk) |
