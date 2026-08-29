@@ -47,7 +47,7 @@ connect the same way. Or use the one-click listing on
 | **VS Code Copilot** | `.vscode/mcp.json` → `{ "servers": { "alphai": { "type": "http", "url": "https://mcp.alphai.io/mcp" } } }` |
 | **Generic** | Streamable HTTP, URL `https://mcp.alphai.io/mcp`, OAuth 2.1 |
 
-## Tools (13)
+## Tools (14)
 
 | Tool | What it does |
 |---|---|
@@ -57,10 +57,11 @@ connect the same way. Or use the one-click listing on
 | `alphai_actionable_now` | Breaking, decision-grade news (actionability + novelty gate) |
 | `alphai_insider_news` | SEC Form 4 insider trades + 13F ownership moves as news |
 | `alphai_pair_analysis` | Two-ticker read-across (news naming both companies) |
-| `alphai_article` | Fetch a single article by `uid` |
+| `alphai_article` | Fetch a single article by `uid` (adds a structured `earnings` read on SEC filings) |
+| `alphai_earnings` | AlphaAI's filing-verified earnings reads per ticker, plus the next report date |
 | `alphai_calendar` | Scheduled macro releases (CPI, FOMC, jobless claims) with times and the coverage that followed |
 | `alphai_macro` | Macro-economy feed — prints, central banks, rates, FX, commodities |
-| `alphai_tickers` | Discover supported tickers — US stocks, ETFs, crypto & foreign listings |
+| `alphai_tickers` | Discover supported tickers — US stocks, ETFs, crypto & foreign listings, incl. each one's `next_report_date` |
 | `alphai_alerts_list` / `_subscribe` / `_unsubscribe` | Manage your own ticker alert subscriptions *(Basic/Pro)* |
 
 All tools are **read-only** except the `alphai_alerts_*` writes, which only ever touch the
