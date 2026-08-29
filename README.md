@@ -38,6 +38,19 @@ copy-paste. ChatGPT, Claude Desktop / claude.ai, Cursor, VS Code, Windsurf and G
 connect the same way. Or use the one-click listing on
 [Smithery](https://smithery.ai/servers/mihail-makeev/alphai-news).
 
+JSON config clients (Cline, Cursor and similar):
+
+```json
+{
+  "mcpServers": {
+    "alphai": {
+      "type": "http",
+      "url": "https://mcp.alphai.io/mcp"
+    }
+  }
+}
+```
+
 ### Other clients
 
 | Client | Config |
@@ -49,20 +62,20 @@ connect the same way. Or use the one-click listing on
 
 ## Tools (14)
 
-| Tool | What it does |
-|---|---|
-| `alphai_news_search` | Full-text + filtered news search (query, tickers, category, dates, relevance) |
-| `alphai_ticker_news` | Latest news for one ticker (optionally incl. insider) |
-| `alphai_trending` | Biggest stories of the last 48h by relevance |
-| `alphai_actionable_now` | Breaking, decision-grade news (actionability + novelty gate) |
-| `alphai_insider_news` | SEC Form 4 insider trades + 13F ownership moves as news |
-| `alphai_pair_analysis` | Two-ticker read-across (news naming both companies) |
-| `alphai_article` | Fetch a single article by `uid` (adds a structured `earnings` read on SEC filings) |
-| `alphai_earnings` | AlphaAI's filing-verified earnings reads per ticker, plus the next report date |
-| `alphai_calendar` | Scheduled macro releases (CPI, FOMC, jobless claims) with times and the coverage that followed |
-| `alphai_macro` | Macro-economy feed — prints, central banks, rates, FX, commodities |
-| `alphai_tickers` | Discover supported tickers — US stocks, ETFs, crypto & foreign listings, incl. each one's `next_report_date` |
-| `alphai_alerts_list` / `_subscribe` / `_unsubscribe` | Manage your own ticker alert subscriptions *(Basic/Pro)* |
+MCP Server URL: https://mcp.alphai.io/mcp
+
+- `alphai_news_search` - Full-text + filtered news search (query, tickers, category, dates, relevance)
+- `alphai_ticker_news` - Latest news for one ticker (optionally incl. insider)
+- `alphai_trending` - Biggest stories of the last 48h by relevance
+- `alphai_actionable_now` - Breaking, decision-grade news (actionability + novelty gate)
+- `alphai_insider_news` - SEC Form 4 insider trades + 13F ownership moves as news
+- `alphai_pair_analysis` - Two-ticker read-across (news naming both companies)
+- `alphai_article` - Fetch a single article by `uid` (adds a structured `earnings` read on SEC filings)
+- `alphai_earnings` - AlphaAI's filing-verified earnings reads per ticker, plus the next report date
+- `alphai_calendar` - Scheduled macro releases (CPI, FOMC, jobless claims) with times and the coverage that followed
+- `alphai_macro` - Macro-economy feed (prints, central banks, rates, FX, commodities)
+- `alphai_tickers` - Discover supported tickers (US stocks, ETFs, crypto & foreign listings, incl. each one's `next_report_date`)
+- `alphai_alerts_list` / `alphai_alerts_subscribe` / `alphai_alerts_unsubscribe` - Manage your own ticker alert subscriptions *(Basic/Pro)*
 
 All tools are **read-only** except the `alphai_alerts_*` writes, which only ever touch the
 caller's own subscriptions. Full schemas, params and defaults are advertised by the server
