@@ -7,9 +7,10 @@
 [![Glama](https://glama.ai/mcp/connectors/io.github.makeev/alphai-mcp/badges/score.svg)](https://glama.ai/mcp/connectors/io.github.makeev/alphai-mcp)
 [![Mentioned in Awesome MCP Servers](https://awesome.re/mentioned-badge.svg)](https://github.com/punkpeye/awesome-mcp-servers)
 
-**Real-time, AI-enriched financial news for AI agents and trading bots** — over the
-[Model Context Protocol](https://modelcontextprotocol.io). Hosted at **`mcp.alphai.io`**,
-no install, OAuth (no API key to paste), free tier 100 calls/day.
+**A [Model Context Protocol](https://modelcontextprotocol.io) (MCP) server for financial
+news, stock market sentiment and SEC Form 4 insider trading data** — built for AI agents
+and trading bots. Hosted at **`mcp.alphai.io`**, no install, OAuth (no API key to paste),
+free tier 20 req/min and 100 req/day.
 
 Every story is enriched with **per-ticker analysis**, a **category** (14 buckets), and a
 **1–10 relevance score**, so an agent can filter to what actually matters before spending
