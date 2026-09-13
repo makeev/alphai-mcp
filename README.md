@@ -1,4 +1,4 @@
-# AlphaAI MCP server
+# AlphAI MCP server
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Official MCP Registry](https://img.shields.io/badge/MCP%20Registry-io.github.makeev%2Falphai--mcp-blue)](https://registry.modelcontextprotocol.io/v0/servers/io.github.makeev%2Falphai-mcp/versions/latest)
@@ -16,13 +16,13 @@ Every story is enriched with **per-ticker analysis**, a **category** (14 buckets
 **1–10 relevance score**, so an agent can filter to what actually matters before spending
 a reasoning token.
 
-> This repo is the public home + `server.json` manifest of the **hosted** AlphaAI MCP
+> This repo is the public home + `server.json` manifest of the **hosted** AlphAI MCP
 > server (the listing on [Smithery](https://smithery.ai/servers/mihail-makeev/alphai-news),
 > [Glama](https://glama.ai/mcp/connectors/io.github.makeev/alphai-mcp),
 > [mcp.so](https://mcp.so/server/alphai-news/makeev), the
 > [MCP Registry](https://registry.modelcontextprotocol.io) and
 > [Awesome MCP Servers](https://github.com/punkpeye/awesome-mcp-servers)). The product is
-> [AlphaAI](https://alphai.io) — a financial-news platform built for AI agents. There is
+> [AlphAI](https://alphai.io) — a financial-news platform built for AI agents. There is
 > **nothing to self-host**: to use it, just connect to `https://mcp.alphai.io/mcp`.
 
 ## Connect
@@ -72,7 +72,7 @@ MCP Server URL: https://mcp.alphai.io/mcp
 - `alphai_insider_news` - SEC Form 4 insider trades + 13F ownership moves as news
 - `alphai_pair_analysis` - Two-ticker read-across (news naming both companies)
 - `alphai_article` - Fetch a single article by `uid` (adds a structured `earnings` read on SEC filings)
-- `alphai_earnings` - AlphaAI's filing-verified earnings reads per ticker, plus the next report date
+- `alphai_earnings` - AlphAI's filing-verified earnings reads per ticker, plus the next report date
 - `alphai_calendar` - Scheduled macro releases (CPI, FOMC, jobless claims) with times and the coverage that followed
 - `alphai_macro` - Macro-economy feed (prints, central banks, rates, FX, commodities)
 - `alphai_tickers` - Discover supported tickers (US stocks, ETFs, crypto & foreign listings, incl. each one's `next_report_date`)
@@ -122,4 +122,4 @@ peer read-across, manage alerts): **[makeev/alphai-claude-skills](https://github
 - `raw_text` (full article bodies) is never served — copyright. Responses carry titles,
   AI summaries, per-ticker analysis, categories and relevance scores.
 
-MIT licensed. Built by [AlphaAI](https://alphai.io).
+MIT licensed. Built by [AlphAI](https://alphai.io).

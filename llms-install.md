@@ -1,6 +1,6 @@
 # AI agent installation guide
 
-AlphaAI is a hosted remote MCP server. There is nothing to download, build, or run
+AlphAI is a hosted remote MCP server. There is nothing to download, build, or run
 locally. Do not clone this repository to install the server; the repository only
 documents it.
 
