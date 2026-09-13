@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.makeev/alphai-mcp",
   "title": "AlphAI",
-  "description": "AI-enriched financial news for AI agents & trading bots: search, trending, insider, earnings reads, macro calendar, scored 1-10.",
+  "description": "Financial news for AI agents: search, trending, insider, earnings reads, macro, scored 1-10.",
   "version": "0.2.0",
   "websiteUrl": "https://alphai.io/mcp",
   "repository": {
