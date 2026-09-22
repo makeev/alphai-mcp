@@ -100,7 +100,7 @@ caller's own subscriptions. Full schemas, params and defaults are advertised by 
 
 Radar refreshes each minute. Delays apply to the complete snapshot, including
 supporting headlines; collection and enrichment add processing time. Its
-descriptive beta scores are not predictions or confirmed alerts. Radar accepts
+descriptive scores are not predictions or confirmed alerts. Radar accepts
 up to 100 rows per call on every plan, with no separate ticker allowance; saved
 watchlists retain their existing limits (Free 10 companies, paid unlimited).
 
