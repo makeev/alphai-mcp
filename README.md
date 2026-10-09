@@ -61,15 +61,18 @@ JSON config clients (Cline, Cursor and similar):
 | **VS Code Copilot** | `.vscode/mcp.json` → `{ "servers": { "alphai": { "type": "http", "url": "https://mcp.alphai.io/mcp" } } }` |
 | **Generic** | Streamable HTTP, URL `https://mcp.alphai.io/mcp`, OAuth 2.1 |
 
-## Tools (18)
+## Tools (21)
 
 MCP Server URL: https://mcp.alphai.io/mcp
 
 - `alphai_news_search` - Full-text + filtered news search (query, tickers, category, dates, relevance)
 - `alphai_ticker_news` - Latest news for one ticker (optionally incl. insider)
-- `alphai_trending` - Biggest stories of the last 48h by relevance
+- `alphai_trending` - Top articles of the last 48h by relevance, reprints collapsed
+- `alphai_stories` - Stories: events two or more publishers reported, summarised from their articles; `list=top` ranks the last 48h, `list=latest` pages newest-first
+- `alphai_story` - One story by `story_id` (the key every news item carries): summary, key facts with sources, per-ticker read, open questions, plus the articles behind it
 - `alphai_actionable_now` - Breaking, decision-grade news (actionability + novelty gate)
 - `alphai_insider_news` - SEC Form 4 insider-trade news
+- `alphai_insider_clusters` - Issuers where several insiders bought on the open market in one run of purchases (Form 4, labeled per buyer)
 - `alphai_pair_analysis` - Two-ticker read-across (news naming both companies)
 - `alphai_article` - Fetch a single article by `uid` (adds a structured `earnings` read on SEC filings)
 - `alphai_earnings` - AlphAI's filing-verified earnings reads per ticker, plus the next report date
